@@ -17,31 +17,28 @@ function App() {
         <small className="text-muted">Lesser-Known CSS Attributes</small>
       </h1>
 
-      <div className="row">
-        {[0, 1].map((i) =>
-          <div className="col-sm" key={i}>
-            <dl className="list-group">
-              {everyNth(entries, 2, i).map(({ name, description }, i) =>
-                <div key={i} className="list-group-item">
-                  <dt>{name}</dt>
-                  <dd>{description}</dd>
-                </div>
-              )}
-            </dl>
+      <dl className="list-group">
+        {windows(entries, 2).map((row, i) =>
+          <div className="row" key={i}>
+            {row.map(({ name, description }, i) =>
+              <div key={i} className="col-sm list-group-item" >
+                <dt>{name}</dt>
+                <dd>{description}</dd>
+              </div>
+            )}
           </div>
-        )
-        }
-      </div >
+        )}
+      </dl>
     </div >
   );
 }
 
-function everyNth(items, n, offset) {
-  const ar = [];
-  for (let i = offset || 0; i < items.length; i += n) {
-    ar.push(items[i]);
+function windows(items, size) {
+  const result = [];
+  for (let i = 0; i + size < items.length; i += size) {
+    result.push(items.slice(i, i + size));
   }
-  return ar;
+  return result;
 }
 
 export default App;
