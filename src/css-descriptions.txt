@@ -1,0 +1,262 @@
+Specifies the alignment between the lines inside a flexible container when the items do not use all available space
+Specifies the alignment for items inside a flexible container
+Specifies the alignment for selected items inside a flexible container
+Resets all properties (except unicode-bidi and direction)
+A shorthand property for all the animation-* properties
+Specifies a delay for the start of an animation
+Specifies whether an animation should be played forwards, backwards or in alternate cycles
+Specifies how long an animation should take to complete one cycle
+Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)
+Specifies the number of times an animation should be played
+Specifies a name for the @keyframes animation
+Specifies whether the animation is running or paused
+Specifies the speed curve of an animation
+Defines whether or not the back face of an element should be visible when facing the user
+A shorthand property for all the background-* properties
+Sets whether a background image scrolls with the rest of the page, or is fixed
+Specifies the blending mode of each background layer (color/image)
+Defines how far the background (color or image) should extend within an element
+Specifies the background color of an element
+Specifies one or more background images for an element
+Specifies the origin position of a background image
+Specifies the position of a background image
+Sets if/how a background image will be repeated
+Specifies the size of the background images
+A shorthand property for border-width, border-style and border-color
+A shorthand property for border-bottom-width, border-bottom-style and border-bottom-color
+Sets the color of the bottom border
+Defines the radius of the border of the bottom-left corner
+Defines the radius of the border of the bottom-right corner
+Sets the style of the bottom border
+Sets the width of the bottom border
+Sets whether table borders should collapse into a single border or be separated
+Sets the color of the four borders
+A shorthand property for all the border-image-* properties
+Specifies the amount by which the border image area extends beyond the border box
+Specifies whether the border image should be repeated, rounded or stretched
+Specifies how to slice the border image
+Specifies the path to the image to be used as a border
+Specifies the width of the border image
+A shorthand property for all the border-left-* properties
+Sets the color of the left border
+Sets the style of the left border
+Sets the width of the left border
+A shorthand property for the four border-*-radius properties
+A shorthand property for all the border-right-* properties
+Sets the color of the right border
+Sets the style of the right border
+Sets the width of the right border
+Sets the distance between the borders of adjacent cells
+Sets the style of the four borders
+A shorthand property for border-top-width, border-top-style and border-top-color
+Sets the color of the top border
+Defines the radius of the border of the top-left corner
+Defines the radius of the border of the top-right corner
+Sets the style of the top border
+Sets the width of the top border
+Sets the width of the four borders
+Sets the elements position, from the bottom of its parent element
+Sets the behavior of the background and border of an element at page-break, or, for in-line elements, at line-break.
+Attaches one or more shadows to an element
+Defines how the width and height of an element are calculated: should they include padding and borders, or not
+Specifies the page-, column-, or region-break behavior after the generated box
+Specifies the page-, column-, or region-break behavior before the generated box
+Specifies the page-, column-, or region-break behavior inside the generated box
+
+
+Specifies the placement of a table caption
+Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable
+Specifies the character encoding used in the style sheet
+Specifies on which sides of an element floating elements are not allowed to float
+Clips an absolutely positioned element
+Sets the color of text
+Specifies the number of columns an element should be divided into
+Specifies how to fill columns, balanced or not
+Specifies the gap between the columns
+A shorthand property for all the column-rule-* properties
+Specifies the color of the rule between columns
+Specifies the style of the rule between columns
+Specifies the width of the rule between columns
+Specifies how many columns an element should span across
+Specifies the column width
+A shorthand property for column-width and column-count
+Used with the :before and :after pseudo-elements, to insert generated content
+Increases or decreases the value of one or more CSS counters
+Creates or resets one or more CSS counters
+Specifies the mouse cursor to be displayed when pointing over an element
+
+
+Specifies the text direction/writing direction
+Specifies how a certain HTML element should be displayed
+
+
+Specifies whether or not to display borders and background on empty cells in a table
+
+
+Defines effects (e.g. blurring or color shifting) on an element before the element is displayed
+A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties
+Specifies the initial length of a flexible item
+Specifies the direction of the flexible items
+A shorthand property for the flex-direction and the flex-wrap properties
+Specifies how much the item will grow relative to the rest
+Specifies how the item will shrink relative to the rest
+Specifies whether the flexible items should wrap or not
+Specifies whether or not a box should float
+A shorthand property for the font-style, font-variant, font-weight, font-size/line-height, and the font-family properties
+A rule that allows websites to download and use fonts other than the "web-safe" fonts
+Specifies the font family for text
+Allows control over advanced typographic features in OpenType fonts
+Allows authors to use a common name in font-variant-alternate for feature activated differently in OpenType
+Controls the usage of the kerning information (how letters are spaced)
+Controls the usage of language-specific glyphs in a typeface
+Specifies the font size of text
+Preserves the readability of text when font fallback occurs
+Selects a normal, condensed, or expanded face from a font family
+Specifies the font style for text
+Controls which missing typefaces (bold or italic) may be synthesized by the browser
+Specifies whether or not a text should be displayed in a small-caps font
+Controls the usage of alternate glyphs associated to alternative names defined in @font-feature-values
+Controls the usage of alternate glyphs for capital letters
+Controls the usage of alternate glyphs for East Asian scripts (e.g Japanese and Chinese)
+Controls which ligatures and contextual forms are used in textual content of the elements it applies to
+Controls the usage of alternate glyphs for numbers, fractions, and ordinal markers
+Controls the usage of alternate glyphs of smaller size positioned as superscript or subscript regarding the baseline of the font
+Specifies the weight of a font
+
+
+A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties
+Either specifies a name for the grid item, or this property is a shorthand property for the grid-row-start, grid-column-start, grid-row-end, and grid-column-end properties
+Specifies a default column size
+Specifies how auto-placed items are inserted in the grid
+Specifies a default row size
+A shorthand property for the grid-column-start and the grid-column-end properties
+Specifies where to end the grid item
+Specifies the size of the gap between columns
+Specifies where to start the grid item
+A shorthand property for the grid-row-gap and grid-column-gap properties
+A shorthand property for the grid-row-start and the grid-row-end properties
+Specifies where to end the grid item
+Specifies the size of the gap between rows
+Specifies where to start the grid item
+A shorthand property for the grid-template-rows, grid-template-columns and grid-areas properties
+Specifies how to display columns and rows, using named grid items
+Specifies the size of the columns, and how many columns in a grid layout
+Specifies the size of the rows in a grid layout
+
+
+Specifies whether a punctuation character may be placed outside the line box
+Sets the height of an element
+Sets how to split words to improve the layout of paragraphs
+
+
+Gives a hint to the browser about what aspects of an image are most important to preserve when the image is scaled
+Allows you to import a style sheet into another style sheet
+Defines whether an element must create a new stacking content
+
+
+Specifies the alignment between the items inside a flexible container when the items do not use all available space
+
+
+Specifies the animation code
+
+
+Specifies the left position of a positioned element
+Increases or decreases the space between characters in a text
+Specifies how/if to break lines
+Sets the line height
+Sets all the properties for a list in one declaration
+Specifies an image as the list-item marker
+Specifies the position of the list-item markers (bullet points)
+Specifies the type of list-item marker
+
+
+Sets all the margin properties in one declaration
+Sets the bottom margin of an element
+Sets the left margin of an element
+Sets the right margin of an element
+Sets the top margin of an element
+Sets the maximum height of an element
+Sets the maximum width of an element
+Sets the style rules for different media types/devices/sizes
+Sets the minimum height of an element
+Sets the minimum width of an element
+Specifies how an element's content should blend with its direct parent background
+
+
+Specifies how the contents of a replaced element should be fitted to the box established by its used height and width
+Specifies the alignment of the replaced element inside its box
+Sets the opacity level for an element
+Sets the order of the flexible item, relative to the rest
+Sets the minimum number of lines that must be left at the bottom of a page when a page break occurs inside an element
+A shorthand property for the outline-width, outline-style, and the outline-color properties
+Sets the color of an outline
+Offsets an outline, and draws it beyond the border edge
+Sets the style of an outline
+Sets the width of an outline
+Specifies what happens if content overflows an element's box
+Specifies whether or not the browser may break lines within words in order to prevent overflow (when a string is too long to fit its containing box)
+Specifies whether or not to clip the left/right edges of the content, if it overflows the element's content area
+Specifies whether or not to clip the top/bottom edges of the content, if it overflows the element's content area
+
+
+A shorthand property for all the padding-* properties
+Sets the bottom padding of an element
+Sets the left padding of an element
+Sets the right padding of an element
+Sets the top padding of an element
+Sets the page-break behavior after an element
+Sets the page-break behavior before an element
+Sets the page-break behavior inside an element
+Gives a 3D-positioned element some perspective
+Defines at which position the user is looking at the 3D-positioned element
+Defines whether or not an element reacts to pointer events
+Specifies the type of positioning method used for an element (static, relative, absolute or fixed)
+
+
+Sets the type of quotation marks for embedded quotations
+
+
+Defines if (and how) an element is resizable by the user
+Specifies the right position of a positioned element
+
+
+Specifies whether to smoothly animate the scroll position in a scrollable box, instead of a straight jump
+
+
+Specifies the width of a tab character
+Defines the algorithm used to lay out table cells, rows, and columns
+Specifies the horizontal alignment of text
+Describes how the last line of a block or a line right before a forced line break is aligned when text-align is "justify"
+Specifies the combination of multiple characters into the space of a single character
+Specifies the decoration added to text
+Specifies the color of the text-decoration
+Specifies the type of line in a text-decoration
+Specifies the style of the line in a text decoration
+Specifies the indentation of the first line in a text-block
+Specifies the justification method used when text-align is "justify"
+Defines the orientation of the text in a line
+Specifies what should happen when text overflows the containing element
+Adds shadow to text
+Controls the capitalization of text
+Specifies the position of the underline which is set using the text-decoration property
+Specifies the top position of a positioned element
+Applies a 2D or 3D transformation to an element
+Allows you to change the position on transformed elements
+Specifies how nested elements are rendered in 3D space
+A shorthand property for all the transition-* properties
+Specifies when the transition effect will start
+Specifies how many seconds or milliseconds a transition effect takes to complete
+Specifies the name of the CSS property the transition effect is for
+Specifies the speed curve of the transition effect
+Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document
+Specifies whether the text of an element can be selected
+Sets the vertical alignment of an element
+Specifies whether or not an element is visible
+Specifies how white-space inside an element is handled
+Sets the minimum number of lines that must be left at the top of a page when a page break occurs inside an element
+Sets the width of an element
+Specifies how words should break when reaching the end of a line
+Increases or decreases the space between words in a text
+Allows long, unbreakable words to be broken and wrap to the next line
+Specifies whether lines of text are laid out horizontally or vertically
+Sets the stack order of a positioned element
