@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import { makeDescription } from './css-descriptions.js';
 import { makeNewName } from './css-names.js';
 
@@ -13,7 +13,9 @@ const entries = Array.from(Array(30)).map(() => (
 function App() {
   return (
     <div className="container">
-      <h1>Lesser-Known CSS Attributes</h1>
+      <h1>Rare CSS
+        <small className="text-muted">Lesser-Known CSS Attributes</small>
+      </h1>
 
       <div className="row">
         {[0, 1].map((i) =>
