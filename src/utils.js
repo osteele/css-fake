@@ -14,6 +14,11 @@ export function windows(items, size) {
     return result;
 }
 
+// A string comparator, useful as an argument to sort().
+export function stringCompare(a, b) {
+    return a < b ? -1 : a > b ? 1 : 0;
+}
+
 export function fixedPoint(fn, x) {
     while (true) {
         const y = fn(x);

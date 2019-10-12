@@ -1,3 +1,13 @@
+h1 i {
+    color: #ccc;
+    margin-left: 10px;
+    transition: color 0.25s;
+}
+
+h1 i:hover {
+    color: #888;
+}
+
 h1 small {
     display: block;
     font-size: large;

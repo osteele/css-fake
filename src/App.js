@@ -1,20 +1,21 @@
-import React from 'react';
+import { default as React, useState } from 'react';
 import './App.css';
 import { makeDescription } from './css-descriptions';
 import { makeNewName } from './css-names';
-import { windows } from './utils';
-
-const entries = Array.from(Array(30)).map(() => (
-  {
-    name: makeNewName(),
-    description: makeDescription(),
-  }
-)).sort(({ name: a }, { name: b }) => a < b ? -1 : a > b ? 1 : 0);
+import { stringCompare, windows } from './utils';
 
 function App() {
+  const [entries, setEntries] = useState(makeRandomEntries());
+  const [spinning, setSpinning] = useState(false);
+  function doRefresh() {
+    setEntries(makeRandomEntries());
+    setSpinning(true);
+    setTimeout(() => setSpinning(false), 1000);
+  }
   return (
     <div className="container">
       <h1>Rare CSS
+          <i title="Click to refresh" onClick={doRefresh} className={`${spinning && 'fa-spin'} fa fa-refresh`} aria-hidden="true"></i>
         <small className="text-muted">Lesser-Known CSS Attributes</small>
       </h1>
 
@@ -33,5 +34,13 @@ function App() {
     </div >
   );
 }
+
+const makeRandomEntries = () => Array.from(Array(30)).map(() => (
+  {
+    name: makeNewName(),
+    description: makeDescription(),
+  }
+)).sort(({ name: a }, { name: b }) => stringCompare(a, b));
+
 
 export default App;
