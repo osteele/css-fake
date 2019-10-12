@@ -3,7 +3,7 @@
 */
 
 /* eslint import/no-webpack-loader-syntax: off */
-import text from '!raw-loader!./css-names.txt';
+import text from '!raw-loader!./data/css-names.txt';
 import { pick } from './utils';
 
 // CSS attribute names
