@@ -30,5 +30,10 @@
   },
   "devDependencies": {
     "raw-loader": "^3.1.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "(?:.*/)(.+)\\.txt": "<rootDir>/__mocks__/$1-mock.js"
+    }
   }
 }
