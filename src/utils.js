@@ -14,8 +14,16 @@ export function windows(items, size) {
     return result;
 }
 
+export function fixedPoint(fn, x) {
+    while (true) {
+        const y = fn(x);
+        if (x === y) { return x; }
+        x = y;
+    }
+}
+
 export function matchingParens(str) {
-    const reduced = str.replace(/\(.*?\)/g, '');
+    const reduced = fixedPoint((s) => s.replace(/\([^(]*?\)/g, ''), str);
     return !reduced.match(/[()]/);
 }
 
