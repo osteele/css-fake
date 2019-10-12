@@ -13,3 +13,7 @@ h1 small {
     font-size: large;
     margin: 5px 0 20px;
 }
+
+.list-group-item {
+    cursor: pointer;
+}
