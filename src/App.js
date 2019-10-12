@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import { makeDescription } from './css-descriptions.js';
-import { makeNewName } from './css-names.js';
+import { makeDescription } from './css-descriptions';
+import { makeNewName } from './css-names';
+import { windows } from './utils';
 
 const entries = Array.from(Array(30)).map(() => (
   {
@@ -31,14 +32,6 @@ function App() {
       </dl>
     </div >
   );
-}
-
-function windows(items, size) {
-  const result = [];
-  for (let i = 0; i + size < items.length; i += size) {
-    result.push(items.slice(i, i + size));
-  }
-  return result;
 }
 
 export default App;

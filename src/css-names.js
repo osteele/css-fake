@@ -4,6 +4,7 @@
 
 /* eslint import/no-webpack-loader-syntax: off */
 import text from '!raw-loader!./css-names.txt';
+import { pick } from './utils';
 
 // CSS attribute names
 const names = new Set(text.split("\n"));
@@ -34,13 +35,6 @@ names.forEach(name => {
     }
 })
 
-// Randomly pick an element from a array-like or iterable.
-function pick(iterable) {
-    const ar = Array.from(iterable);
-    const i = Math.floor(ar.length * Math.random());
-    return ar[i];
-}
-
 // Synthesize a multi-word CSS name. It may turn out to be the same as a actual
 // CSS name.
 function makeName() {
@@ -66,7 +60,6 @@ export function makeNewName() {
         if (names.has(name)) {
             continue;
         }
-        // console.log('name=', name, names.has(name));
         return name;
     }
 }

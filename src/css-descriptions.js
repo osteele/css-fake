@@ -4,6 +4,7 @@
 
 /* eslint import/no-webpack-loader-syntax: off */
 import text from '!raw-loader!./css-descriptions.txt';
+import { matchingParens } from './utils';
 
 const descriptions = new Set(text.split("\n"));
 descriptions.delete("");
@@ -42,11 +43,6 @@ function _makeDescription() {
         words.push(word);
     }
     return words.join(" ");
-}
-
-function matchingParens(str) {
-    const reduced = str.replace(/\(.*?\)/g, '');
-    return !reduced.match(/[()]/);
 }
 
 export function makeDescription() {
