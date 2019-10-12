@@ -8,9 +8,12 @@ function App() {
   const [entries, setEntries] = useState(makeRandomEntries());
   const [spinning, setSpinning] = useState(false);
   function doRefresh() {
-    setEntries(makeRandomEntries());
+    if (spinning) { return; }
     setSpinning(true);
-    setTimeout(() => setSpinning(false), 1000);
+    setTimeout(() => {
+      setSpinning(false);
+      setEntries(makeRandomEntries());
+    }, 1000);
   }
   function refreshItem(i) {
     const item = { name: makeNewName(), description: makeDescription() }

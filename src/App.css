@@ -8,6 +8,10 @@ h1 i:hover {
     color: #888;
 }
 
+h1 i.fa-spin {
+    color: #eee;
+}
+
 h1 small {
     display: block;
     font-size: large;
