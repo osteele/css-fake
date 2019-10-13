@@ -7,6 +7,7 @@ import { stringCompare, windows } from './utils';
 function App() {
   const [entries, setEntries] = useState(makeRandomEntries());
   const [spinning, setSpinning] = useState(false);
+
   function doRefresh() {
     if (spinning) { return; }
     setSpinning(true);
@@ -15,10 +16,11 @@ function App() {
       setEntries(makeRandomEntries());
     }, 1000);
   }
-  function refreshItem(i) {
-    const item = { name: makeNewName(), description: makeDescription() }
-    setEntries([...entries.slice(0, i), item, ...entries.slice(i + 1)])
+
+  function replaceItem(i) {
+    setEntries([...entries.slice(0, i), randomEntry(), ...entries.slice(i + 1)])
   }
+
   return (
     <div className="container">
       <h1>Rare CSS
@@ -30,7 +32,7 @@ function App() {
         {windows(entries, 2).map((row, i) =>
           <div className="row" key={i}>
             {row.map(({ name, description }, j) =>
-              <div key={j} className="col-sm list-group-item" onClick={() => refreshItem(2 * i + j)}>
+              <div key={j} className="col-sm list-group-item" onClick={() => replaceItem(2 * i + j)}>
                 <dt>{name}</dt>
                 <dd>{description}</dd>
               </div>
@@ -38,16 +40,17 @@ function App() {
           </div>
         )}
       </dl>
-    </div >
+      <footer className="small">This site is under <a href="https://underconstruction.fun">under construction</a>.</footer>
+    </div>
   );
 }
 
-const makeRandomEntries = () => Array.from(Array(30)).map(() => (
-  {
-    name: makeNewName(),
-    description: makeDescription(),
-  }
-)).sort(({ name: a }, { name: b }) => stringCompare(a, b));
+const makeRandomEntries = () => Array.from(Array(30)).map(randomEntry)
+  .sort(({ name: a }, { name: b }) => stringCompare(a, b));
 
+const randomEntry = () => ({
+  name: makeNewName(),
+  description: makeDescription(),
+})
 
 export default App;
