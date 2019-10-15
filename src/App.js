@@ -4,19 +4,16 @@ import { fakeAttributeName } from './fakeCssAttributeNames';
 import { fakeDescription } from './fakeCssDescriptions';
 import { arrayWindows, stringCompare } from './utils';
 
+
 function App() {
   const [entries, setEntries] = useState(fakeEntries());
   const [spinning, setSpinning] = useState(false);
-  const refreshTimeoutID = useRef(null);
 
-  useEffect(() => {
+  useReplaceableTimeout(() => {
     const match = window.location.search.match(/[?&]refresh(?:=(\d+))?($|&)/);
     if (match) {
       const seconds = Number(match[1] || 10000);
-      if (refreshTimeoutID.current) {
-        clearTimeout(refreshTimeoutID.current);
-      }
-      refreshTimeoutID.current = setTimeout(() => setEntries(fakeEntries()), seconds);
+      return setTimeout(() => setEntries(fakeEntries()), seconds);
     }
   });
 
@@ -64,6 +61,17 @@ const fakeEntries = () => Array.from(Array(30)).map(fakeEntry)
 const fakeEntry = () => ({
   name: fakeAttributeName(),
   description: fakeDescription(),
-})
+});
+
+function useReplaceableTimeout(callback) {
+  const timeoutIdRef = useRef(null);
+  useEffect(() => {
+    if (timeoutIdRef.current) {
+      clearTimeout(timeoutIdRef.current);
+    }
+    const timeoutId = callback();
+    timeoutIdRef.current = timeoutId;
+  });
+}
 
 export default App;
