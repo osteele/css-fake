@@ -1,4 +1,4 @@
-import { default as React, useEffect, useState } from 'react';
+import { default as React, useEffect, useRef, useState } from 'react';
 import './App.css';
 import { fakeAttributeName } from './fakeCssAttributeNames';
 import { fakeDescription } from './fakeCssDescriptions';
@@ -7,13 +7,16 @@ import { arrayWindows, stringCompare } from './utils';
 function App() {
   const [entries, setEntries] = useState(fakeEntries());
   const [spinning, setSpinning] = useState(false);
+  const refreshTimeoutID = useRef(null);
 
   useEffect(() => {
     const match = window.location.search.match(/[?&]refresh(?:=(\d+))?($|&)/);
     if (match) {
       const seconds = Number(match[1] || 10000);
-      // console.info(`Replacing all items in ${seconds / 1000} seconds`);
-      setTimeout(() => setEntries(fakeEntries()), seconds);
+      if (refreshTimeoutID.current) {
+        clearTimeout(refreshTimeoutID.current);
+      }
+      refreshTimeoutID.current = setTimeout(() => setEntries(fakeEntries()), seconds);
     }
   });
 
