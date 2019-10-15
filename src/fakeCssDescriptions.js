@@ -1,5 +1,6 @@
-/* This uses a simple bigram to avoid overfitting, since the dataset is small
-* and this seems to produce sufficient randomness.
+/**
+ * This uses a simple bigram to avoid overfitting, since the dataset is small
+ * and this seems to produce sufficient randomness.
 */
 
 /* eslint import/no-webpack-loader-syntax: off */
@@ -31,8 +32,10 @@ descriptions.forEach((line) => {
     })
 });
 
-// Create a new description, possibly with mismatched
-// parens or the same as a real description.
+/**
+ * Create a new description, possibly with mismatched parens or the same as a
+ * real description.
+ */
 function createDescription() {
     const words = [];
     let word = null;

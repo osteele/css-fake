@@ -14,7 +14,9 @@ export function arrayWindows(items, size) {
     return result;
 }
 
-// A string comparator, useful as an argument to sort().
+/**
+ * A string comparator, useful as an argument to sort().
+ */
 export function stringCompare(a, b) {
     return a < b ? -1 : a > b ? 1 : 0;
 }
@@ -32,7 +34,7 @@ export function hasMatchingParens(str) {
     return !reduced.match(/[()]/);
 }
 
-// Randomly pick an element from a array-like or iterable.
+/** Randomly pick an element from a array-like or iterable. */
 export function pick(iterable) {
     const ar = Array.from(iterable);
     const i = Math.floor(ar.length * Math.random());

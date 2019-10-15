@@ -1,5 +1,6 @@
-/* Export a single function makeNewName that returns a string that is similar to
-* but distinct from multi-word (hyphenated) CSS attribute names.
+/**
+ * Export a single function makeNewName that returns a string that is similar to
+ * but distinct from multi-word (hyphenated) CSS attribute names.
 */
 
 /* eslint import/no-webpack-loader-syntax: off */
@@ -20,7 +21,7 @@ const solo = new Set();
 // number of actual CSS names at each word-count
 const stats = [0];
 
-// populate first, middle, last, and solo
+/** Populate first, middle, last, and solo  */
 names.forEach(name => {
     const parts = name.split('-');
     stats[parts.length] = (stats[parts.length] || 0) + 1
@@ -35,8 +36,10 @@ names.forEach(name => {
     }
 })
 
-// Synthesize a multi-word CSS name. It may turn out to be the same as a actual
-// CSS name.
+/**
+ * Synthesize a multi-word CSS name. It may turn out to be the same as a actual
+ * CSS name.
+ */
 function createAttributeName() {
     const sum = (xs) => xs.reduce((a, b) => a + b, 0);
     const words = [pick(first)];
@@ -49,7 +52,8 @@ function createAttributeName() {
     return words.join("-");
 }
 
-/* Synthesize a multi-word (hyphenated) CSS name that is distinct from actual
+/**
+ * Synthesize a multi-word (hyphenated) CSS name that is distinct from actual
  * CSS attribute names. This matches the word count statistics of the actual CSS
  * attribute names, but it does not use a Markov process to match collocation
  * frequencies. The set of attribute names is too small.
