@@ -4,7 +4,7 @@
 
 /* eslint import/no-webpack-loader-syntax: off */
 import text from '!raw-loader!./data/css-descriptions.txt';
-import { matchingParens } from './utils';
+import { hasMatchingParens } from './utils';
 
 const descriptions = new Set(text.split("\n"));
 descriptions.delete("");
@@ -31,7 +31,9 @@ descriptions.forEach((line) => {
     })
 });
 
-function _makeDescription() {
+// Create a new description, possibly with mismatched
+// parens or the same as a real description.
+function createDescription() {
     const words = [];
     let word = null;
     while (true) {
@@ -45,15 +47,16 @@ function _makeDescription() {
     return words.join(" ");
 }
 
-export function makeDescription() {
-    function isGood(description) {
-        if (descriptions.has(description)) { return false; }
-        if (!matchingParens(description)) { return false; }
-        return true;
-    }
+function testDescription(description) {
+    if (descriptions.has(description)) { return false; }
+    if (!hasMatchingParens(description)) { return false; }
+    return true;
+}
+
+export function fakeDescription() {
     while (true) {
-        const description = _makeDescription();
-        if (isGood(description)) {
+        const description = createDescription();
+        if (testDescription(description)) {
             return description;
         }
     }

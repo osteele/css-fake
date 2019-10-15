@@ -37,7 +37,7 @@ names.forEach(name => {
 
 // Synthesize a multi-word CSS name. It may turn out to be the same as a actual
 // CSS name.
-function makeName() {
+function createAttributeName() {
     const sum = (xs) => xs.reduce((a, b) => a + b, 0);
     const words = [pick(first)];
     // add middle words, with the same length distribution as the observed CSS
@@ -54,9 +54,9 @@ function makeName() {
  * attribute names, but it does not use a Markov process to match collocation
  * frequencies. The set of attribute names is too small.
  */
-export function makeNewName() {
+export function fakeAttributeName() {
     while (true) {
-        const name = makeName();
+        const name = createAttributeName();
         if (names.has(name)) {
             continue;
         }

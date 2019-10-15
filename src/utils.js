@@ -6,7 +6,7 @@ export function everyNth(items, n, offset) {
     return result;
 }
 
-export function windows(items, size) {
+export function arrayWindows(items, size) {
     const result = [];
     for (let i = 0; i + size < items.length; i += size) {
         result.push(items.slice(i, i + size));
@@ -27,7 +27,7 @@ export function fixedPoint(fn, x) {
     }
 }
 
-export function matchingParens(str) {
+export function hasMatchingParens(str) {
     const reduced = fixedPoint((s) => s.replace(/\([^(]*?\)/g, ''), str);
     return !reduced.match(/[()]/);
 }
@@ -38,6 +38,3 @@ export function pick(iterable) {
     const i = Math.floor(ar.length * Math.random());
     return ar[i];
 }
-
-
-
