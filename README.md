@@ -4,8 +4,8 @@ A SSP display of lesser-known CSS attributes.
 
 ## Available Scripts
 
-`npm install`
+`yarn install`
 
-`npm start`
+`yarn start`
 
-`npm test`
+`yarn test`
